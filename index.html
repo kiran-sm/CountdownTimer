@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Countdown</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <!-- Video background -->
+    <video src="./time.mp4" class="video-background" loop muted autoplay></video>
+    <div class="video-overlay"></div>
+    <!-- container -->
+    <div class="container">
+        <div class="input-container" id="input-container"><h1>Creatte a custom Countdown!</h1>
+        <form action="" class="form" id="countDownForm">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Counting for">
+            <label for="date-picker">Select a Date</label>
+            <input type="date" name="" id="date-picker">
+            <button type="submit">Submit</button>
+
+        </form>
+        </div>
+        <!-- count down -->
+        <div class="countdown" id="countdown">
+            <h1 id="countdown-title">Countdown title here</h1>
+            <ul>
+                <li><span>3</span>Days</li>
+                <li><span>3</span>Hour</li>
+                <li><span>3</span>Minutes</li>
+                <li><span>3</span>Seconds</li>
+            </ul>
+            <button id="countdown-button">Reset</button>
+        </div>
+        <!-- complete -->
+        <div class="complete" id="complete">
+            <h1 class="complete-title">CountDown Complete</h1>
+            <h1 id="complete-info">Countdown Finished on 05-05-0202</h1>
+            <button id="complete-button">New CountDown</button>
+        </div>
+    </div>
+</body>
+</html>
