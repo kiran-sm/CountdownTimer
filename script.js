@@ -86,7 +86,7 @@ function updateCountdown (e) {
         date: countdownDate,
     };
     console.log(savedCountdown);
-    localStorage.setItem('countDown',JSON.stringify(savedCountdown));
+    localStorage.setItem('countdown',JSON.stringify(savedCountdown));
     // get num version of date
     if (countdownDate === '') {
         alert ('please enter the date')
@@ -108,23 +108,23 @@ function reset() {
     // reset values
     countdownTitle = '' ;
     countdownDate = '' ;
-    localStorage.removeItem('countDown');
+    localStorage.removeItem('countdown');
 
 }
 
 // restore previous countdown from local storage
 
-function restorePreviousCountdown (
-    if ( localStorage.getItem('countDown')) {
+function restorePreviousCountdown (){
+    if ( localStorage.getItem('countdown')) {
         inputContainer.hidden =true;
-        savedCountdown = JSON.parse(localStorage.getItem('countDown'));
+        savedCountdown = JSON.parse(localStorage.getItem('countdown'));
         countdownTitle = savedCountdown.title;
         countdownDate = savedCountdown.date;
         countownValue = new Date(countdownDate).getTime();
         updateDOM();
 
     }
-)
+}
 
 // event listeners
 // countdownForm.addEventListener('submit',updateCountdown);
